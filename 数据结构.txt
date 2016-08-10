@@ -1,0 +1,12 @@
+cvnote:{
+  noteBook:{},
+  
+  {
+  title: String
+  tags:  [String]
+  content: String
+  isPublic: boolean
+  createTime: Date
+  updateTime: Date
+  }
+}

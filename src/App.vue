@@ -1,33 +1,22 @@
 <template>
   <div id="app">
-    <img class="logo" src="./assets/logo.png">
-    <hello></hello>
-    <p>
-      Welcome to your Vue.js app!
-    </p>
-    <p>
-      To get a better understanding of how this boilerplate works, check out
-      <a href="http://vuejs-templates.github.io/webpack" target="_blank">its documentation</a>.
-      It is also recommended to go through the docs for
-      <a href="http://webpack.github.io/" target="_blank">Webpack</a> and
-      <a href="http://vuejs.github.io/vue-loader/" target="_blank">vue-loader</a>.
-      If you have any issues with the setup, please file an issue at this boilerplate's
-      <a href="https://github.com/vuejs-templates/webpack" target="_blank">repository</a>.
-    </p>
-    <p>
-      You may also want to checkout
-      <a href="https://github.com/vuejs/vue-router/" target="_blank">vue-router</a> for routing and
-      <a href="https://github.com/vuejs/vuex/" target="_blank">vuex</a> for state management.
-    </p>
+    <left-bar></left-bar>
+    <note-list></note-list>
+    <note-view></note-view>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import 'whatwg-fetch'
+import LeftBar from './components/leftBar'
+import NoteView from './components/noteView'
+import NoteList from './components/noteList'
 
 export default {
   components: {
-    Hello
+    'left-bar': LeftBar,
+    'note-view': NoteView,
+    'note-list': NoteList
   }
 }
 </script>
@@ -38,18 +27,18 @@ html {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100%;
 }
 
 #app {
-  color: #2c3e50;
-  margin-top: -100px;
-  max-width: 600px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   font-family: Source Sans Pro, Helvetica, sans-serif;
   text-align: center;
+  display: flex;
 }
 
 #app a {
